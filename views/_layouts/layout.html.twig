@@ -38,6 +38,10 @@
 
 <body>
 {% block top %}
+    {% set navigation_bar = [['index', 'Профилированный брус'],
+    ['construction', 'Строительство']] %}
+    {% set active_page = active_page|default('index') %}
+
     <header>
         <div class="fly-fixed">
             <div class="header-top">
@@ -71,8 +75,12 @@
                 <div class="fluid-container">
                     <button class="menu-btn hidden"></button>
                     <ul class="menu">
-                        <li><a class="active" href="/">Профилированный брус</a></li>
-                        <li><a href="/construction.html">Строительство</a></li>
+                        {% for item in navigation_bar %}
+                            <li>
+                                <a {% if item[0] == active_page %} class="active"{% endif %}
+                                        href="{{ item[0] }}">{{ item[1] }}</a>
+                            </li>
+                        {% endfor %}
                         <li><a href="#">Пиломатериалы</a></li>
                         <li><a href="#">Утеплитель</a></li>
                         <li><a href="#">Доставка</a></li>
