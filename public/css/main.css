@@ -916,9 +916,11 @@ table.p0 tr th {
     border: 3px solid #fff;
     padding: 0;
 }
+
 .get-btn{
     font-size: 23px;
     width: 310px;
+    margin: 20px 0 0 39%;
 }
 .get-btn:hover,
 .price-btn:hover{
@@ -1022,8 +1024,10 @@ footer .row{
     font-weight: bold;
     font-size: 35px;
 }
-.content p {
+.content p, ul{
     font-size: 18pt;
+    padding: 0 0 8px 0;
+    text-indent: 25px;
 }
 .content {
     margin: 0 0 25px 0;
