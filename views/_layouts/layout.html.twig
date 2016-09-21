@@ -38,8 +38,8 @@
 
 <body>
 {% block top %}
-    {% set navigation_bar = [['index', 'Профилированный брус'],
-    ['construction', 'Строительство']] %}
+    {% set navigation_bar = [['index', 'Профилированный брус'], 
+    ['construction', 'Строительство'], ['lumber', 'Пиломатериалы'] ] %}
     {% set active_page = active_page|default('index') %}
 
     <header>
@@ -81,7 +81,6 @@
                                         href="{{ item[0] }}">{{ item[1] }}</a>
                             </li>
                         {% endfor %}
-                        <li><a href="#">Пиломатериалы</a></li>
                         <li><a href="#">Утеплитель</a></li>
                         <li><a href="#">Доставка</a></li>
                         <li><a href="#">Оплата</a></li>
@@ -92,16 +91,6 @@
                     </ul>
                 </div>
             </nav>
-        </div>
-        <div class="picture">
-            <div class="fluid-container">
-                <div class="row">
-                    <div class="col s12 m10 offset-m1 l7 offset-l3 no-padding">
-                        <h2>Производство профилированного бруса <br> из хвойной древесины
-                            <span>за 5 дней от 7600 руб/м3</span> Без предоплаты!</h2>
-                    </div>
-                </div>
-            </div>
         </div>
     </header>
 {% endblock %}

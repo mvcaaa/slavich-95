@@ -972,8 +972,6 @@ table.p0 tr th {
 }
 
 
-
-
 .price{
     padding: 50px 0 20px;
     background-color: #029ed9;
@@ -1019,4 +1017,14 @@ footer ul li:first-of-type{
 footer .row{
     margin-bottom: 0;
 }
-
+.content h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+}
+.content p {
+    font-size: 18pt;
+}
+.content {
+    margin: 0 0 25px 0;
+}
