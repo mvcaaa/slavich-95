@@ -1,0 +1,15 @@
+{
+  "name": "slavich",
+  "devDependencies": {
+    "express": "~4.9.0",
+    "grunt": "~0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.6.0",
+    "grunt-dom-munger": "^3.4.0",
+    "grunt-express": "^1.4.1",
+    "grunt-twig-renderer": "^1.0.0",
+    "grunt-browser-sync": "^2.2.0",
+    "twig": "~0.8.8",
+    "compression": "^1.3.0"
+  }
+}

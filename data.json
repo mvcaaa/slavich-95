@@ -1,0 +1,8 @@
+{
+  "forms": {
+    "orderForm":{
+      "header": "Форма заказа",
+      "form_action": "form-process.php"
+    }
+  }
+}

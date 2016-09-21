@@ -1,0 +1,12 @@
+{
+  "name": "slavich",
+  "private": true,
+  "dependencies": {
+    "normalize-css": "~3.0.2",
+    "jquery": "~2.2.0",
+    "bootstrap": "*",
+    "bootstrap-formhelpers": "*",
+    "requirejs": "~2.1.16"
+  }
+}
+

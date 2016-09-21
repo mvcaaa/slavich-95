@@ -1,0 +1,516 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1700px) {
+    .catalog-item{
+        width: 48%;
+        flex-grow: 1;
+    }
+    .catalog .bit{
+        max-width: 410px;
+        margin: 0 auto 20px;
+
+    }
+
+}
+
+@media only screen and (max-width : 1650px) {
+    .worth .box > div:first-of-type{
+        padding-left: 1%;
+    }
+    .worth .box > div:last-of-type{
+        padding-right: 1%;
+    }
+
+}
+@media only screen and (max-width : 1600px) {
+    .made .box{
+        padding: 0;
+    }
+    .owl-carousel {
+         padding: 0 10px;
+    }
+    .price-item-1{
+        font-size: 16px;
+    }
+    .price-item-2{
+        font-size: 20px;
+    }
+
+}
+@media only screen and (max-width : 1500px) {
+    h2{
+        font-size: 32px;
+    }
+    .picture h2{
+        max-width: 720px;
+    }
+    .about span{
+        padding: 0;
+    }
+    .menu li{
+        padding: 0 10px;
+    }
+    .menu li a,
+    .item p,
+    .item p a,
+    .delivery-item{
+        font-size: 16px;
+    }
+    .logo{
+        padding-left: 0;
+    }
+    .contact{
+        padding-right: 0;
+    }
+    .call-back ul li:first-of-type{
+        font-size: 22px;
+    }
+    .item:before{
+        left: 15px;
+    }
+    .price-item-1{
+        font-size: 14px;
+    }
+    .price-item-2{
+        font-size: 18px;
+        letter-spacing: -1px;
+    }
+    .price-btn{
+        font-size: 18px;
+        width: 300px;
+    }
+    .header-box{
+        width: 80%;
+    }
+
+
+}
+@media only screen and (max-width : 1400px) {
+    .header-box{
+        width: 95%;
+    }
+    .call-back ul li:first-of-type{
+        font-size: 20px;
+    }
+
+}
+
+@media only screen and (max-width : 1200px) {
+    .fluid-container{
+        padding: 0 5px;
+    }
+    .price{
+        padding: 20px 0 10px;
+    }
+    h2{
+        font-size: 26px;
+    }
+    .picture h2{
+        max-width: 560px;
+    }
+    h4{
+        font-size: 14px;
+    }
+    .menu li{
+        padding: 0 5px;
+    }
+    .menu li a{
+        font-size: 14px;
+    }
+    .contact,
+    .logo a{
+        padding: 0;
+    }
+    .about span,
+    .worth-item li:last-of-type,
+    .made-item li:last-of-type{
+        font-size: 12px;
+    }
+    .call-back-btn{
+        font-size: 14px;
+        width: 135px;
+    }
+    .get-btn,
+    .faq-item,
+    .faq-item span{
+        font-size: 20px;
+    }
+    .get-btn{
+        width: 275px;
+    }
+    .call-back ul li:first-of-type,
+    .vantage-item h3{
+        font-size: 16px;
+    }
+    .contact li{
+        font-size: 12px;
+    }
+    .box-cont{
+        padding: 0 5px;
+    }
+    .worth-item h4{
+        font-size: 13px;
+        margin: 15px 0 10px;
+    }
+    .delivery-item{
+        font-size: 14px;
+    }
+    .delivery-item li{
+        margin-bottom: 15px;
+    }
+    .price-item-1{
+        font-size: 10px;
+    }
+    .price-item-2{
+        font-size: 14px;
+    }
+    .price-btn{
+        font-size: 15px;
+        width: 235px;
+    }
+    .delivery img{
+        margin-bottom: 30px;
+    }
+    .catalog-box{
+        padding: 20px 0;
+    }
+    .header-box{
+        width: 100%;
+    }
+
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .catalog{
+        padding: 0;
+    }
+    .catalog-item{
+        width: auto;
+    }
+    .catalog .bit{
+        max-width: 100%;
+    }
+    .delivery{
+        padding-top: 10px;
+    }
+
+    nav .fluid-container{
+        height: 100%;
+    }
+    .picture{
+        background: url("../img/bg.jpg") no-repeat center;
+        background-size: cover;
+    }
+    .picture h2{
+        padding: 35px 0 50px;
+    }
+    .menu-btn{
+        display: block;
+    }
+    .menu{
+        display: none;
+    }
+    .call-back li ul,
+    .contact{
+        display: none;
+    }
+    .header-box{
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    .logo,
+    .about,
+    .call-back{
+        padding: 0;
+    }
+    .worth .box{
+        flex-wrap: wrap;
+        padding: 0 20px;
+        justify-content: space-around;
+        align-content: stretch;
+    }
+    .box-cont{
+        width: 30%;
+        margin-bottom: 10px;
+    }
+    .made .row img{
+        display: block;
+    }
+    .made-item{
+    padding: 1.5% 0 1.5% 1%;
+    }
+    .made-item span{
+        font-size: 40px;
+    }
+    .made-item span:after{
+        height: 40px;
+        margin-top: -30px;
+    }
+    .price .valign-wrapper{
+        display: block;
+    }
+    .price .row > div{
+        display: block;
+        text-align: center;
+        margin: auto auto 10px!important;
+    }
+    footer{
+        padding: 10px 0;
+
+    }
+    footer ul li:first-of-type{
+        margin-bottom: 10px;
+    }
+    .faq{
+        padding: 20px 0 10px;
+    }
+    .item p{
+        padding: 5% 5% 5% 10%;
+    }
+    .item:before {
+        position: absolute;
+        content: close-quote;
+        display: block;
+        left: 10px;
+        top: 30px;
+        width: 30px;
+        height: 20px;
+    }
+    .order h2{
+        margin-bottom: 20px;
+    }
+    .vantage .box{
+        padding-top: 30px;
+        flex-wrap: wrap;
+        align-content: stretch;
+    }
+    .vantage-item{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+    .vantage-item  img{
+        max-height: 70px;
+    }
+    .vantage-item li:first-of-type{
+        min-height: inherit;
+        margin-bottom: 0;
+        margin-right: 25px;
+        width: 20%;
+    }
+    .vantage-item h3{
+        color: #fff;
+    }
+
+}
+
+@media only screen and (max-width : 815px) {
+    .catalog .bit{
+        max-width: 410px;
+        margin: auto auto 20px;
+    }
+
+
+
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .get-btn,
+    .faq-item,
+    .faq-item span{
+        font-size: 18px;
+    }
+    .logo img{
+        max-width: 100%;
+        height: auto;
+    }
+    .box-cont{
+        width: 48%;
+    }
+    .made-item span{
+        font-size: 28px;
+    }
+    .made-item li{
+        margin-bottom: 5px;
+    }
+    .made-item li:last-of-type,
+    .about span,
+    footer ul li{
+        font-size: 10px;
+    }
+    .header-box{
+        padding: 0 5px;
+    }
+    .call-back-btn {
+        font-size: 12px;
+        width: 120px;
+    }
+    .delivery img{
+        margin-bottom: 10px;
+    }
+    .delivery h2{
+        margin-bottom: 10px;
+    }
+    .vantage-item h3{
+        font-size: 13px;
+    }
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 600px) {
+    .made .row{
+        display: none;
+    }
+    h2{
+        font-size: 26px;
+        max-width: 90%;
+        margin: auto auto 10px;
+    }
+    .item p,
+    .item p a{
+        font-size: 14px;
+    }
+    .box-cont{
+        width: 100%;
+    }
+    .worth-item h4{
+        text-align: center;
+    }
+    .made .box{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .made-item{
+        width: 55%;
+        max-width: none;
+    }
+    .header-box{
+        justify-content: space-around;
+    }
+    .logo, .about, .call-back{
+        text-align: center;
+        width: 30%;
+    }
+    .get-btn, .faq-item, .faq-item span{
+        font-size: 16px;
+    }
+    .vantage-item  img{
+        max-width: 70px;
+    }
+    .vantage .box{
+        padding-top: 50px;
+    }
+    .vantage-item h3{
+        font-size: 12px;
+    }
+
+
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 480px) {
+    h2{
+        font-size: 22px;
+        max-width: 100%;
+    }
+    .item p,
+    .item p a{
+        font-size: 12px;
+    }
+    .about{
+        display: none;
+    }
+    .logo, .call-back{
+        width: 48%;
+    }
+    .call-back{
+        text-align: right;
+    }
+    .price-item-2{
+        font-size: 12px;
+    }
+    .delivery-item li:first-of-type{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .faq-item{
+        padding-left: 0;
+    }
+    .item p{
+        padding: 10px 15px;
+    }
+    .catalog .bit .item-info-cost,
+    .fs20{
+        font-size: 15px;
+    }
+    .item-info-block .item-plan{
+        margin-right: 5px;
+    }
+    .bold,
+    .catalog .bit .item-info-cost tr td:first-child{
+        display: inline-block;
+    }
+    .item-info-block ul{
+        font-size: 11px;
+    }
+    .catalog .bit .item-info-block{
+        display: block;
+        float: none;
+        margin-left: 125px;
+        width: 70%;
+    }
+
+
+}
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+    .item p,
+    .item p a{
+        font-size: 10px;
+    }
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 993px) {
+     .menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        margin: 0;
+    }
+
+}
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}

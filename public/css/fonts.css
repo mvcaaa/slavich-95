@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../font/roboto/roboto-bold-webfont.eot');
+    src: url('../font/roboto/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/roboto/roboto-bold-webfont.woff') format('woff'),
+    url('../font/roboto/roboto-bold-webfont.ttf') format('truetype'),
+    url('../font/roboto/roboto-bold-webfont.svg#robotobold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../font/roboto/roboto-medium-webfont.eot');
+    src: url('../font/roboto/roboto-medium-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/roboto/roboto-medium-webfont.woff') format('woff'),
+    url('../font/roboto/roboto-medium-webfont.ttf') format('truetype'),
+    url('../font/roboto/roboto-medium-webfont.svg#robotomedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../font/roboto/roboto-regular-webfont.eot');
+    src: url('../font/roboto/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/roboto/roboto-regular-webfont.woff') format('woff'),
+    url('../font/roboto/roboto-regular-webfont.ttf') format('truetype'),
+    url('../font/roboto/roboto-regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'rockletter';
+    src: url('../font/rockletter/rockletter_simple-webfont.eot');
+    src: url('../font/rockletter/rockletter_simple-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/rockletter/rockletter_simple-webfont.woff') format('woff'),
+    url('../font/rockletter/rockletter_simple-webfont.ttf') format('truetype'),
+    url('../font/rockletter/rockletter_simple-webfont.svg#rockletter_simpleregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
