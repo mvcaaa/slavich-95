@@ -39,7 +39,7 @@
 <body>
 {% block top %}
     {% set navigation_bar = [['index', 'Профилированный брус'], 
-    ['construction', 'Строительство'], ['lumber', 'Пиломатериалы'] ] %}
+    ['construction', 'Строительство'], ['lumber', 'Пиломатериалы'], ['delivery', 'Доставка'] ] %}
     {% set active_page = active_page|default('index') %}
 
     <header>
@@ -82,7 +82,6 @@
                             </li>
                         {% endfor %}
                         <li><a href="#">Утеплитель</a></li>
-                        <li><a href="#">Доставка</a></li>
                         <li><a href="#">Оплата</a></li>
                         <li><a href="#">Полезная информация</a></li>
                         <li><a href="#">Отзывы</a></li>
