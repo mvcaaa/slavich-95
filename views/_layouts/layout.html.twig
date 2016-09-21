@@ -38,8 +38,14 @@
 
 <body>
 {% block top %}
-    {% set navigation_bar = [['index', 'Профилированный брус'], 
-    ['construction', 'Строительство'], ['lumber', 'Пиломатериалы'], ['delivery', 'Доставка'], ['payment', 'Оплата'] ] %}
+    {% set navigation_bar = [
+    ['index', 'Профилированный брус'],
+    ['construction', 'Строительство'], 
+    ['lumber', 'Пиломатериалы'], 
+    ['delivery', 'Доставка'], 
+    ['payment', 'Оплата'], 
+    ['djut', 'Утеплитель'] ] %}
+    
     {% set active_page = active_page|default('index') %}
 
     <header>
@@ -80,7 +86,6 @@
                                 <a {% if item[0] == active_page %} class="active"{% endif %} href="{{ item[0] }}">{{ item[1] }}</a>
                             </li>
                         {% endfor %}
-                        <li><a href="#">Утеплитель</a></li>
                         <li><a href="#">Полезная информация</a></li>
                         <li><a href="#">Отзывы</a></li>
                         <li><a href="#">Фото</a></li>
