@@ -39,12 +39,11 @@
                             <div class="item-info-block">
                                 <div class="item-plan"><img src="img/content/schemas/shemas-1.png" alt=""></div>
                                 <a href="#" class="fs20 em14">Брус 1</a>
-                                <ul class="mt15">
-                                    <li><span class="bold">100 x 150 x 6000 мм</span></li>
-                                    <li><span>ширина x высота x длина</span></li>
-                                    <li><span class="brown-light mt10">Количество: <span class="bold">11,11</span> шт./м³</span>
-                                    </li>
-                                </ul>
+                                <p class="mt15">
+                                    <span class="bold">100 x 150 x 6000 мм</span>
+                                    <span>ширина x высота x длина</span>
+                                    <span class="brown-light mt10">Количество: <span class="bold">11,11</span> шт./м³</span>
+                                </p>
                             </div>
                         </div>
                         <table class="noborder item-info-cost">
@@ -61,13 +60,14 @@
                             </tr>
                             </tbody>
                         </table>
-                        <button id="want-to-order1" data-name="Профилированный брус 100х150х6000 мм"
-                                data-price="7600" data-num="1" data-sum="7600"
-                                data-url="http://www.slavich-95.ru/catalog/brus-profilirovannyj-100x150x6000mm/"
-                                class="order-btn pattern pp"
-                                onclick="FDPopup.open(50934, {'hideCloseBtn':false,'host':'formdesigner.ru','overlay':{'background':'#000000','opacity':0.1}}); return false;">
-                            Заказать
-                        </button>
+                        {% include "../_partials/blocks/button.thml.twig" with {
+                            'button_id': 'want-to-order1',
+                            'button_class': 'order-btn pattern pp',
+                            'form_id': '50934',
+                            'form_title': 'Форма заказа',
+                            'button_text': 'Заказать',
+                        }
+                        %}
                     </div>
                 </div>
                 <div class="catalog-item">
@@ -125,14 +125,14 @@
                             </tr>
                             </tbody>
                         </table>
-                        <button id="want-to-order2"
-                                data-name="Профилированный брус (полубревно) 100х150х6000 мм"
-                                data-price="7600" data-num="1" data-sum="7600"
-                                data-url="http://www.slavich-95.ru/catalog/brus-profilirovannyj-100x150x6000mm/"
-                                class="order-btn pattern pp"
-                                onclick="FDPopup.open(50934, {'hideCloseBtn':false,'host':'formdesigner.ru','overlay':{'background':'#000000','opacity':0.1}}); return false;">
-                            Заказать
-                        </button>
+                        {% include "../_partials/blocks/button.thml.twig" with {
+                        'button_id': 'want-to-order2',
+                        'button_class': 'order-btn pattern pp',
+                        'form_id': '50934',
+                        'form_title': 'Форма заказа',
+                        'button_text': 'Заказать',
+                        }
+                        %}
                     </div>
                 </div>
                 <div class="catalog-item">
@@ -178,13 +178,14 @@
                             </tr>
                             </tbody>
                         </table>
-                        <button id="want-to-order3" data-name="Брус 2" data-price="7600" data-num="1"
-                                data-sum="7600"
-                                data-url="http://www.slavich-95.ru/catalog/brus-profilirovannyj-100x150x6000mm/"
-                                class="order-btn pattern pp"
-                                onclick="FDPopup.open(50934, {'hideCloseBtn':false,'host':'formdesigner.ru','overlay':{'background':'#000000','opacity':0.1}}); return false;">
-                            Заказать
-                        </button>
+                        {% include "../_partials/blocks/button.thml.twig" with {
+                        'button_id': 'want-to-order3',
+                        'button_class': 'order-btn pattern pp',
+                        'form_id': '50934',
+                        'form_title': 'Форма заказа',
+                        'button_text': 'Заказать',
+                        }
+                        %}
                     </div>
                 </div>
                 <div class="catalog-item">
@@ -237,13 +238,14 @@
                             </tr>
                             </tbody>
                         </table>
-                        <button id="want-to-order4" data-name="Брус 2 (полубревно)" data-price="7600" data-num="1"
-                                data-sum="7600"
-                                data-url="http://www.slavich-95.ru/catalog/brus-profilirovannyj-100x150x6000mm/"
-                                class="order-btn pattern pp"
-                                onclick="FDPopup.open(50934, {'hideCloseBtn':false,'host':'formdesigner.ru','overlay':{'background':'#000000','opacity':0.1}}); return false;">
-                            Заказать
-                        </button>
+                        {% include "../_partials/blocks/button.thml.twig" with {
+                        'button_id': 'want-to-order4',
+                        'button_class': 'order-btn pattern pp',
+                        'form_id': '50934',
+                        'form_title': 'Форма заказа',
+                        'button_text': 'Заказать',
+                        }
+                        %}
                     </div>
                 </div>
             </div>
@@ -291,13 +293,14 @@
                             </tr>
                             </tbody>
                         </table>
-                        <button id="want-to-order5" data-name="Брус 3" data-price="7600" data-num="1"
-                                data-sum="7600"
-                                data-url="http://www.slavich-95.ru/catalog/brus-profilirovannyj-100x150x6000mm/"
-                                class="order-btn pattern pp"
-                                onclick="FDPopup.open(50934, {'hideCloseBtn':false,'host':'formdesigner.ru','overlay':{'background':'#000000','opacity':0.1}}); return false;">
-                            Заказать
-                        </button>
+                        {% include "../_partials/blocks/button.thml.twig" with {
+                        'button_id': 'want-to-order5',
+                        'button_class': 'order-btn pattern pp',
+                        'form_id': '50934',
+                        'form_title': 'Форма заказа',
+                        'button_text': 'Заказать',
+                        }
+                        %}
                     </div>
                 </div>
                 <div class="catalog-item">
@@ -344,13 +347,14 @@
                             </tr>
                             </tbody>
                         </table>
-                        <button id="want-to-order6" data-name="Брус 4" data-price="7600" data-num="1"
-                                data-sum="7600"
-                                data-url="http://www.slavich-95.ru/catalog/brus-profilirovannyj-100x150x6000mm/"
-                                class="order-btn pattern pp"
-                                onclick="FDPopup.open(50934, {'hideCloseBtn':false,'host':'formdesigner.ru','overlay':{'background':'#000000','opacity':0.1}}); return false;">
-                            Заказать
-                        </button>
+                        {% include "../_partials/blocks/button.thml.twig" with {
+                        'button_id': 'want-to-order6',
+                        'button_class': 'order-btn pattern pp',
+                        'form_id': '50934',
+                        'form_title': 'Форма заказа',
+                        'button_text': 'Заказать',
+                        }
+                        %}
                     </div>
                 </div>
                 <div class="catalog-item">
@@ -396,13 +400,14 @@
                             </tr>
                             </tbody>
                         </table>
-                        <button id="want-to-order7" data-name="Брус 5" data-price="7600" data-num="1"
-                                data-sum="7600"
-                                data-url="http://www.slavich-95.ru/catalog/brus-profilirovannyj-100x150x6000mm/"
-                                class="order-btn pattern pp"
-                                onclick="FDPopup.open(50934, {'hideCloseBtn':false,'host':'formdesigner.ru','overlay':{'background':'#000000','opacity':0.1}}); return false;">
-                            Заказать
-                        </button>
+                        {% include "../_partials/blocks/button.thml.twig" with {
+                        'button_id': 'want-to-order7',
+                        'button_class': 'order-btn pattern pp',
+                        'form_id': '50934',
+                        'form_title': 'Форма заказа',
+                        'button_text': 'Заказать',
+                        }
+                        %}
                     </div>
                 </div>
                 <div class="catalog-item">
@@ -448,13 +453,14 @@
                             </tr>
                             </tbody>
                         </table>
-                        <button id="want-to-order8" data-name="Профилированный брус 100х150х6000 мм"
-                                data-price="7600" data-num="1" data-sum="7600"
-                                data-url="http://www.slavich-95.ru/catalog/brus-profilirovannyj-100x150x6000mm/"
-                                class="order-btn pattern pp"
-                                onclick="FDPopup.open(50934, {'hideCloseBtn':false,'host':'formdesigner.ru','overlay':{'background':'#000000','opacity':0.1}}); return false;">
-                            Заказать
-                        </button>
+                        {% include "../_partials/blocks/button.thml.twig" with {
+                        'button_id': 'want-to-order8',
+                        'button_class': 'order-btn pattern pp',
+                        'form_id': '50934',
+                        'form_title': 'Форма заказа',
+                        'button_text': 'Заказать',
+                        }
+                        %}
                     </div>
                 </div>
             </div>

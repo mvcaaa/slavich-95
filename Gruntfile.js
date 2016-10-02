@@ -10,6 +10,8 @@ var makeRelativeLink = function (val) {
       htmlHref = 'index.html';
     } else if (url.split('.').pop() == 'php') {
       htmlHref = val; 
+    } else if (url.split('.').pop() == 'jpg') {
+      htmlHref = val; 
     } else {
       htmlHref = url.replace(/^\//, '').replace(/\//ig, '_') + '.html';
     }
