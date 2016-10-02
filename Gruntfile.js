@@ -98,27 +98,27 @@ module.exports = function (grunt) {
                 return makeRelativeLink(val);
               }
             },
-            {
-              selector: 'form[action]',
-              attribute: 'action',
-              value: function (i, val) {
-                return makeRelativeLink(val);
-              }
-            },
-            {
-              selector: 'link[href^="/"]',
-              attribute: 'href',
-              value: function (i, val) {
-                return val.replace(/^\//, '');
-              }
-            },
-            {
-              selector: '[src^="/"]',
-              attribute: 'src',
-              value: function (i, val) {
-                return val.replace(/^\//, '');
-              }
-            },
+            // {
+            //   selector: 'form[action]',
+            //   attribute: 'action',
+            //   value: function (i, val) {
+            //     return makeRelativeLink(val);
+            //   }
+            // },
+            // {
+            //   selector: 'link[href^="/"]',
+            //   attribute: 'href',
+            //   value: function (i, val) {
+            //     return val.replace(/^\//, '');
+            //   }
+            // },
+            // {
+            //   selector: '[src^="/"]',
+            //   attribute: 'src',
+            //   value: function (i, val) {
+            //     return val.replace(/^\//, '');
+            //   }
+            // },
             {
               selector: 'script[data-main]',
               attribute: 'data-main',
@@ -141,6 +141,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-browser-sync');
 
   grunt.registerTask('server', ['express:server', 'browserSync', 'express-keepalive']);
-  grunt.registerTask('build', ['clean:build', 'twigRenderer:build', 'dom_munger:build', 'copy:build']);
+  grunt.registerTask('build', ['clean:build', 'twigRenderer:build', 'copy:build']);
 
 };
