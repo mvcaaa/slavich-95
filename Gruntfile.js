@@ -55,6 +55,7 @@ module.exports = function (grunt) {
         src: [
           '**/*.twig',
           '!_*/*.twig',
+          '!_*/**/*.twig',
           '!_*/*.php',
           '!**/_*.twig'
         ], // Match twig templates but not partials
@@ -130,6 +131,17 @@ module.exports = function (grunt) {
         },
         src: 'build/html/*.html'
       }
+    },
+    'ftpush': {
+      build: {
+        auth: {
+          host: 'ftp.slavich95.nichost.ru',
+          authKey: 'key1'
+        },
+        src: 'build/html',
+        dest: 'slavich95.ru/docs',
+        exclusions: ['build/html/vendor']
+      }
     }
   });
 
@@ -139,8 +151,10 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-dom-munger');
   grunt.loadNpmTasks('grunt-browser-sync');
-
+  // grunt.loadNpmTasks('grunt-ftp-deploy');
+  grunt.loadNpmTasks('grunt-ftpush');
+  
   grunt.registerTask('server', ['express:server', 'browserSync', 'express-keepalive']);
-  grunt.registerTask('build', ['clean:build', 'twigRenderer:build', 'copy:build']);
+  grunt.registerTask('build', ['clean:build', 'twigRenderer:build', 'copy:build', 'ftpush']);
 
 };
