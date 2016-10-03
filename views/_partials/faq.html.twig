@@ -6,7 +6,14 @@
                     <li>Возникли вопросы? Позвоните нам! <span>8 (800) 555-12-88 или +7 (911) 101-55-35</span>
                     <li>Или пишите: <span>slavich-95@mail.ru</span></li>
                     <li>Или получите бесплатную квалифицированную консультацию специалиста
-                        <button class="get-btn">Получить консультацию ></button>
+                        {% include "../_partials/blocks/button.thml.twig" with {
+                        'button_id': 'get-btn1',
+                        'button_class': 'get-btn',
+                        'form_id': '50934',
+                        'form_title': 'Консультация',
+                        'button_text': 'Получить консультацию',
+                        }
+                        %}
                     </li>
                 </ul>
             </div>

@@ -40,7 +40,14 @@
                 </ul>
             </div>
             <div class="col s12 m12 l3 valign center-align no-padding">
-                <button class="price-btn">Рассчитать цену с доставкой ></button>
+                {% include "../_partials/blocks/button.thml.twig" with {
+                'button_id': 'price-btn1',
+                'button_class': 'price-btn',
+                'form_id': '50934',
+                'form_title': 'Рассчитать цену с доставкой',
+                'button_text': 'Получить консультацию',
+                }
+                %}
             </div>
         </div>
     </div>

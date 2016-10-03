@@ -61,7 +61,14 @@
                         </div>
                         <ul class="call-back">
                             <li>
-                                <button class="call-back-btn">Свяжитесь с нами</button>
+                                {% include "../_partials/blocks/button.thml.twig" with {
+                                'button_id': 'call-back-btn1',
+                                'button_class': 'call-back-btn',
+                                'form_id': '50934',
+                                'form_title': 'Свяжитесь с нами',
+                                'button_text': 'Свяжитесь с нами',
+                                }
+                                %}
                             </li>
                             <li>
                                 <ul>
