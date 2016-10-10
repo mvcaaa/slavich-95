@@ -3,8 +3,90 @@
 
 {% block content %}
     <section class="construction">
+        <br>
         <div class="fluid-container">
             <div class="content">
+                <div class="panel panel-success" id="form">
+                    <div class="panel-heading center-align">
+                        <h3>Получить предварительный расчет</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form method="post" action="php/mailer.php" enctype="multipart/form-data">
+
+                            <div class="form-group row">
+                                <label for="inputEmail" class="col-xs-2 col-form-label">Ваш email</label>
+                                <div class="col-xs-5">
+                                    <input type="email" class="form-control" id="inputEmail" name="inputEmail"
+                                           aria-describedby="emailHelp" placeholder="Введите ваш адрес email" required>
+                                    <small id="emailHelp" class="form-text text-muted">Ваш адрес будет использован
+                                        только
+                                        для обратной связи.
+                                    </small>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="inputPhone" class="col-xs-2 col-form-label">Номер телефона</label>
+                                <div class="col-xs-5">
+                                    <input type="tel" class="form-control" id="inputPhone" name="inputPhone"
+                                           aria-describedby="inputPhone" placeholder="Введите ваш номер телефона" required>
+                                    <small id="emailHelp" class="form-text text-muted">Ваш номер будет использован
+                                        только
+                                        для обратной связи.
+                                    </small>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="uploaded_file" class="col-xs-2 col-form-label">Файл</label>
+                                <div class="col-xs-5">
+                                    <span class="btn btn-file"><input type="file" name="uploaded_file"
+                                                                      id="uploaded_file" required/></span>
+                                    <small id="FileHelp" class="form-text text-muted">
+                                        Максимальный размер файла - 200Mb
+                                    </small>
+                                    <div class="help-block with-errors" id="errors"></div>
+                                </div>
+                            </div>
+
+                            <input type="hidden" name="MAX_FILE_SIZE" value="200000000"/>
+                            <input type="hidden" name="redirect_page" value="construction.html?status=ok"/>
+                            <button id="attach_doc" class="order-btn pattern pp">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="panel panel-success" id="uploadOk" style="display: none">
+                    <div class="panel-body">
+                        Файл успешно отправлен
+                    </div>
+                </div>
+                <h1>Полезная информация</h1>
+                <p>На сайте нашей компании вы можете ознакомиться с полезной информацией и рядом технических решений,
+                    применяемых нами для строительства из профилированного бруса домов, бань и других деревянных
+                    сооружений. Специалисты нашей компании качественно и быстро выполнят сборку сруба под усадку с
+                    кровлей, дома или бани, любого типа сложности, на готовый фундамент и по Вашему индивидуальному
+                    проекту или чертежу. Если же вы не нашли подходящего варианта типового строительства, то можете
+                    сообщить нам о своих задумках, и мы в кратчайшие сроки поможем разработать сметный расчет для Вашего
+                    строения из бруса под усадку в соответствии с Вашими пожеланиями. Воспользовавшись кнопкой «получить
+                    предварительный расчет» Вы имеете возможность отправить нам эскиз, проект или иной другой вариант
+                    для получения информации о Вашем строении. Необходимая от Вас информация: сечение бруса для наружных
+                    и внутренних стен, высота пол - потолок поэтажно, кровельный материал для крыши. Наш расчет будет
+                    максимально точен и приближен к реальной стоимости строительных мероприятий и материалов, что
+                    поможет Вам избежать дополнительных затрат за непонятные услуги.</p>
+                <p>ООО «Славич 95» предлагает выгодное сотрудничество: качество сборки и материалов, а так же сроки
+                    строительства очень порадуют Вас. Цены на сборку из бруса существенно ниже, чем у конкурентов
+                    связано это с тем, что мы не закупаем деревянные материалы у посреднических предприятий, а
+                    производим их сами. В штате нашей компании работают профессиональные мастера, которые имеют высокую
+                    квалификацию и большой опыт строительных работ, а также собственные наработки в домостроении из
+                    профилированного бруса с применением, проверенных временем технологий, обеспечивающих безопасность и
+                    надежность строений. Кроме того, в случае серьезных намерений к сотрудничеству, можете получить
+                    доступ на наши стройки в близи с Вашим местонахождением, своими глазами увидеть материалы и
+                    строительный процесс. </p>
+                <p>Среди прочих строительная компания «ООО Славич 95» зарекомендовала себя как надежная, ответственная
+                    компания, соблюдающая свои гарантийные обязательства. Сделав заказ у нас, Вы будете приятно удивлены
+                    низкими ценами, минимальными сроками производства и высоким качеством строительства.</p>
+
                 <h1>Основные технические решения нашей сборки.</h1>
                 <p>Основанием дома является закладной ряд или обвязка, которая кладется на готовый
                     фундамент, изготавливается из обрезного пиломатериала и обязательно обрабатывается
@@ -55,3 +137,25 @@
     {% include "../_partials/feedback.html.twig" %}
     {% include "../_partials/faq.html.twig" %}
 {% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        if (getParameterByName('status')) {
+            $("#form").hide("fast");
+            $("#uploadOk").show("slow");
+        }
+
+    </script>
+{% endblock %}
+

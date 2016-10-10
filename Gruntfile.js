@@ -156,6 +156,6 @@ module.exports = function (grunt) {
   
   grunt.registerTask('server', ['express:server', 'browserSync', 'express-keepalive']);
   grunt.registerTask('build', ['clean:build', 'twigRenderer:build', 'copy:build']);
-  grunt.registerTask('deploy', ['ftpush']);
+  grunt.registerTask('deploy', ['build', 'ftpush']);
 
 };
