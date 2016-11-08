@@ -1,8 +1,93 @@
 {
   "forms": {
-    "orderForm":{
+    "orderForm": {
       "header": "Форма заказа",
       "form_action": "form-process.php"
     }
+  },
+  "catalog": {
+    "brus": [
+      {
+        "id": 1,
+        "name": "Брус 1",
+        "img_alt": "Профилированный брус 1",
+        "title": "Профилированный брус 100х150х6000 мм",
+        "img_folder": "img/content/brus/0",
+        "schema_img": "img/content/schemas/shemas-1.png",
+        "dimensions": "100 x 150 x 6000",
+        "amount": "11,11",
+        "price": "7800"
+      },
+      {
+        "id": 2,
+        "name": "Брус 1 (полубревно)",
+        "title": "Профилированный брус 1 (полубревно) 100х150х6000 мм",
+        "img_folder": "img/content/brus/1",
+        "schema_img": "img/content/schemas/shemas-1.png",
+        "dimensions": "100 x 150 x 6000",
+        "amount": "11,11",
+        "price": "7800"
+      },
+      {
+        "id": 3,
+        "name": "Брус 2",
+        "title": "Профилированный брус 2 150x150x6000 мм",
+        "img_folder": "img/content/brus/2",
+        "schema_img": "img/content/schemas/cxema_2.jpg",
+        "dimensions": "150 x 150 x 6000",
+        "amount": "7,4",
+        "price": "7800"
+      },
+      {
+        "id": 4,
+        "name": "Брус 2 (полубревно)",
+        "title": "Профилированный брус 2 (полубревно) 150x150x6000 мм",
+        "img_folder": "img/content/brus/3",
+        "schema_img": "img/content/schemas/cxema_2_semi.jpg",
+        "dimensions": "150 x 150 x 6000",
+        "amount": "7,4",
+        "price": "7800"
+      },
+      {
+        "id": 5,
+        "name": "Брус 3",
+        "title": "Брус 3",
+        "img_folder": "img/content/brus/4",
+        "schema_img": "img/content/schemas/cxema_3.jpg",
+        "dimensions": "150 x 200 x 6000",
+        "amount": "5,55",
+        "price": "7800"
+      },
+      {
+        "id": 6,
+        "name": "Брус 4",
+        "title": "Брус 4",
+        "img_folder": "img/content/brus/5",
+        "schema_img": "img/content/schemas/cxema_4.jpg",
+        "dimensions": "100 x 200 x 6000",
+        "amount": "8,33",
+        "price": "7800"
+      },
+      {
+        "id": 7,
+        "name": "Брус 5",
+        "title": "Брус 5",
+        "img_folder": "img/content/brus/5",
+        "schema_img": "img/content/schemas/cxema_4.jpg",
+        "dimensions": "200 x 150 x 6000",
+        "amount": "5,55",
+        "price": "7800"
+      },
+      {
+        "id": 8,
+        "name": "Брус 6",
+        "title": "Брус 6",
+        "img_folder": "img/content/brus/6",
+        "schema_img": "img/content/schemas/cxema_4_semi.jpg",
+        "dimensions": "200 x 200 x 6000",
+        "amount": "4,17",
+        "price": "7800"
+      }
+    ]
   }
 }

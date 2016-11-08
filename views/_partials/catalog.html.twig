@@ -3,466 +3,111 @@
         <h2>Каталог профилированного бруса для дома, бани, беседки и т.д.</h2>
         <div class="catalog">
             <div class="box">
-                <div class="catalog-item">
-                    <div class="bit calc-bit">
-                        <div class="clr">
-                            <a href="img/content/brus/0/1.jpg" rel="images26" class="fancybox zoom"
-                               title="Профилированный брус 100х150х6000 мм">
-                                <img src="img/content/brus/0/1.jpg" alt="Профилированный брус 1"
-                                     title="Профилированный брус 100х150х6000 мм">
-                            </a>
-                            <a href="img/content/brus/0/2.jpg" rel="images26" class="fancybox d-n"
-                               title="Профилированный брус 100х150х6000 мм">
-                                <img src="img/content/brus/0/2.jpg" alt="brus-1"
-                                     title="Профилированный брус 100х150х6000 мм">
-                            </a>
-                            <a href="img/content/brus/0/3.jpg" rel="images26" class="fancybox d-n"
-                               title="Профилированный брус 100х150х6000 мм">
-                                <img src="img/content/brus/0/3.jpg" alt="brus-2"
-                                     title="Профилированный брус 100х150х6000 мм">
-                            </a>
-                            <a href="img/content/brus/0/4.jpg" rel="images26" class="fancybox d-n"
-                               title="Профилированный брус 100х150х6000 мм">
-                                <img src="img/content/brus/0/4.jpg" alt="brus-2"
-                                     title="Профилированный брус 100х150х6000 мм">
-                            </a>
-                            <a href="img/content/brus/0/5.jpg" rel="images26" class="fancybox d-n"
-                               title="Профилированный брус 100х150х6000 мм">
-                                <img src="img/content/brus/0/5.jpg" alt="brus-2"
-                                     title="Профилированный брус 100х150х6000 мм">
-                            </a>
-                            <a href="img/content/brus/0/6.jpg" rel="images26" class="fancybox d-n"
-                               title="Профилированный брус 100х150х6000 мм">
-                                <img src="img/content/brus/0/6.jpg" alt="brus-2"
-                                     title="Профилированный брус 100х150х6000 мм">
-                            </a>
-                            <div class="item-info-block">
-                                <div class="item-plan"><img src="img/content/schemas/shemas-1.png" alt=""></div>
-                                <a href="#" class="fs20 em14">Брус 1</a>
-                                <p class="mt15">
-                                    <span class="bold">100 x 150 x 6000 мм</span>
-                                    <span>ширина x высота x длина</span>
-                                    <span class="brown-light mt10">Количество: <span class="bold">11,11</span> шт./м³</span>
-                                </p>
+                {% for item in catalog.brus | slice(0,4) %}
+                    <div class="catalog-item">
+                        <div class="bit calc-bit">
+                            <div class="clr">
+                                <a href="{{ item.img_folder }}/1.jpg" rel="images26" class="fancybox zoom"
+                                   title="{{ item.title }}">
+                                    <img src="{{ item.img_folder }}/1.jpg" alt="{{ item.img_alt }}"
+                                         title="{{ item.title }}">
+                                </a>
+                                {% for i in 2..6 %}
+                                <a href="{{ item.img_folder }}/{{ i }}.jpg" rel="images26" class="fancybox d-n"
+                                   title="{{ item.title }}">
+                                    <img src="{{ item.img_folder }}/{{ i }}.jpg" alt="brus-{{ iten.id }}"
+                                         title="{{ item.title }}">
+                                </a>
+                                {% endfor %}
+                                <div class="item-info-block">
+                                    <div class="item-plan"><img src="{{ item.schema_img }}" alt=""></div>
+                                    <a href="#" class="fs20 em14">{{ item.name }}</a>
+                                    <p class="mt15">
+                                        <span class="bold">{{ item.dimensions }}</span>
+                                        <span>ширина x высота x длина</span>
+                                        <span class="brown-light mt10">Количество: <span class="bold">{{ item.amount }}</span> шт./м³</span>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <table class="noborder item-info-cost">
-                            <tbody>
-                            <tr>
-                                <td><span class="bold">7800</span> руб./м³</td>
-                                <td>X</td>
-                                <td>
-                                    <input type="number" min="1" name="item-info-num"
-                                           onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
-                                           value="1" class="calc-num" title="">м³ = <span
-                                            class="bold calc-sum">7800</span> руб.
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        {% include "../_partials/blocks/button.thml.twig" with {
+                            <table class="noborder item-info-cost">
+                                <tbody>
+                                <tr>
+                                    <td><span class="bold">{{ item.price }}</span> руб./м³</td>
+                                    <td>X</td>
+                                    <td>
+                                        <input type="number" min="1" name="item-info-num"
+                                               onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+                                               value="1" class="calc-num" title="">м³ = <span
+                                                class="bold calc-sum">{{ item.price }}</span> руб.
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            {% include "../_partials/blocks/button.thml.twig" with {
                             'button_id': 'want-to-order1',
                             'button_class': 'order-btn pattern pp',
                             'form_id': '50934',
                             'form_title': 'Форма заказа',
                             'button_text': 'Заказать',
-                        }
-                        %}
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <div class="bit calc-bit">
-                        <div class="clr">
-                            <a href="img/content/brus/1/1.jpg" rel="images26" class="fancybox zoom"
-                               title="Профилированный брус (полубревно) 100х150х6000 мм">
-                                <img src="img/content/brus/1/1.jpg" alt="Профилированный брус 1"
-                                     title="Профилированный брус (полубревно) 100х150х6000 мм">
-                            </a>
-                            <a href="img/content/brus/1/2.jpg" rel="images26" class="fancybox d-n"
-                               title="Профилированный брус (полубревно) 100х150х6000 мм">
-                                <img src="img/content/brus/1/2.jpg" alt="brus-1"
-                                     title="Профилированный брус (полубревно) 100х150х6000 мм">
-                            </a>
-                            <a href="img/content/brus/1/3.jpg" rel="images26" class="fancybox d-n"
-                               title="Профилированный брус (полубревно) 100х150х6000 мм">
-                                <img src="img/content/brus/1/3.jpg" alt="brus-2"
-                                     title="Профилированный брус (полубревно) 100х150х6000 мм">
-                            </a>
-                            <a href="img/content/brus/1/4.jpg" rel="images26" class="fancybox d-n"
-                               title="Профилированный брус (полубревно) 100х150х6000 мм">
-                                <img src="img/content/brus/1/4.jpg" alt="brus-2"
-                                     title="Профилированный брус (полубревно) 100х150х6000 мм">
-                            </a>
-                            <a href="img/content/brus/1/5.jpg" rel="images26" class="fancybox d-n"
-                               title="Профилированный брус (полубревно) 100х150х6000 мм">
-                                <img src="img/content/brus/1/5.jpg" alt="brus-2"
-                                     title="Профилированный брус (полубревно) 100х150х6000 мм">
-                            </a>
-                            <a href="img/content/brus/1/6.jpg" rel="images26" class="fancybox d-n"
-                               title="Профилированный брус (полубревно) 100х150х6000 мм">
-                                <img src="img/content/brus/1/6.jpg" alt="brus-2"
-                                     title="Профилированный брус (полубревно) 100х150х6000 мм">
-                            </a>
-                            <div class="item-info-block">
-                                <div class="item-plan"><img src="img/content/schemas/shemas-1.png" alt=""></div>
-                                <a href="#" class="fs20 em14">Брус 1 (полубревно)</a>
-                                <p class="mt15"><span class="bold">100 x 150 x 6000 мм</span><span>ширина x высота x длина</span><span
-                                            class="brown-light mt10">Количество: <span class="bold">11,11</span> шт./м³</span>
-                                </p>
-                            </div>
+                            }
+                            %}
                         </div>
-                        <table class="noborder item-info-cost">
-                            <tbody>
-                            <tr>
-                                <td><span class="bold">7800</span> руб./м³</td>
-                                <td>X</td>
-                                <td>
-                                    <input type="number" min="1" name="item-info-num"
-                                           onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
-                                           value="1" class="calc-num" title="">м³ = <span
-                                            class="bold calc-sum">7800</span> руб.
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        {% include "../_partials/blocks/button.thml.twig" with {
-                        'button_id': 'want-to-order2',
-                        'button_class': 'order-btn pattern pp',
-                        'form_id': '50934',
-                        'form_title': 'Форма заказа',
-                        'button_text': 'Заказать',
-                        }
-                        %}
                     </div>
-                </div>
-                <div class="catalog-item">
-                    <div class="bit calc-bit">
-                        <div class="clr">
-                            <a href="img/content/brus/2/1.jpg" rel="images26" class="fancybox zoom" title="Брус 2">
-                                <img src="img/content/brus/2/1.jpg" alt="Профилированный брус 1" title="Брус 2">
-                            </a>
-                            <a href="img/content/brus/2/2.jpg" rel="images26" class="fancybox d-n" title="Брус 2">
-                                <img src="img/content/brus/2/2.jpg" alt="brus-1" title="Брус 2">
-                            </a>
-                            <a href="img/content/brus/2/3.jpg" rel="images26" class="fancybox d-n" title="Брус 2">
-                                <img src="img/content/brus/2/3.jpg" alt="brus-2" title="Брус 2">
-                            </a>
-                            <a href="img/content/brus/2/4.jpg" rel="images26" class="fancybox d-n" title="Брус 2">
-                                <img src="img/content/brus/2/4.jpg" alt="brus-2" title="Брус 2">
-                            </a>
-                            <a href="img/content/brus/2/5.jpg" rel="images26" class="fancybox d-n" title="Брус 2">
-                                <img src="img/content/brus/2/5.jpg" alt="brus-2" title="Брус 2">
-                            </a>
-                            <a href="img/content/brus/2/6.jpg" rel="images26" class="fancybox d-n" title="Брус 2">
-                                <img src="img/content/brus/2/6.jpg" alt="brus-2" title="Брус 2">
-                            </a>
-                            <div class="item-info-block">
-                                <div class="item-plan"><img src="img/content/schemas/cxema_2.jpg" alt=""></div>
-                                <a href="#" class="fs20 em14">Брус 2</a>
-                                <p class="mt15"><span class="bold">150 x 150 x 6000 мм</span><span>ширина x высота x длина</span><span
-                                            class="brown-light mt10">Количество: <span
-                                                class="bold">7,4</span> шт./м³</span></p>
-                            </div>
-                        </div>
-                        <table class="noborder item-info-cost">
-                            <tbody>
-                            <tr>
-                                <td><span class="bold">7800</span> руб./м³</td>
-                                <td>X</td>
-                                <td>
-                                    <input type="number" min="1" name="item-info-num"
-                                           onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
-                                           value="1" class="calc-num" title="">м³ = <span
-                                            class="bold calc-sum">7800</span> руб.
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        {% include "../_partials/blocks/button.thml.twig" with {
-                        'button_id': 'want-to-order3',
-                        'button_class': 'order-btn pattern pp',
-                        'form_id': '50934',
-                        'form_title': 'Форма заказа',
-                        'button_text': 'Заказать',
-                        }
-                        %}
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <div class="bit calc-bit">
-                        <div class="clr">
-                            <a href="img/content/brus/3/1.jpg" rel="images26" class="fancybox zoom"
-                               title="Брус 2 (полубревно)">
-                                <img src="img/content/brus/3/1.jpg" alt="Брус 2 (полубревно)"
-                                     title="Брус 2 (полубревно)">
-                            </a>
-                            <a href="img/content/brus/3/2.jpg" rel="images26" class="fancybox d-n"
-                               title="Брус 2 (полубревно)">
-                                <img src="img/content/brus/3/2.jpg" alt="brus-1" title="Брус 2 (полубревно)">
-                            </a>
-                            <a href="img/content/brus/3/3.jpg" rel="images26" class="fancybox d-n"
-                               title="Брус 2 (полубревно)">
-                                <img src="img/content/brus/3/3.jpg" alt="brus-2" title="Брус 2 (полубревно)">
-                            </a>
-                            <a href="img/content/brus/3/4.jpg" rel="images26" class="fancybox d-n"
-                               title="Брус 2 (полубревно)">
-                                <img src="img/content/brus/3/4.jpg" alt="brus-2" title="Брус 2 (полубревно)">
-                            </a>
-                            <a href="img/content/brus/3/5.jpg" rel="images26" class="fancybox d-n"
-                               title="Брус 2 (полубревно)">
-                                <img src="img/content/brus/3/5.jpg" alt="brus-2" title="Брус 2 (полубревно)">
-                            </a>
-                            <a href="img/content/brus/3/6.jpg" rel="images26" class="fancybox d-n"
-                               title="Брус 2 (полубревно)">
-                                <img src="img/content/brus/3/6.jpg" alt="brus-2" title="Брус 2 (полубревно)">
-                            </a>
-                            <div class="item-info-block">
-                                <div class="item-plan"><img src="img/content/schemas/cxema_2_semi.jpg" alt=""></div>
-                                <a href="#" class="fs20 em14">Брус 2 (полубревно)</a>
-                                <p class="mt15"><span class="bold">150 x 150 x 6000 мм</span><span>ширина x высота x длина</span><span
-                                            class="brown-light mt10">Количество: <span
-                                                class="bold">7,4</span> шт./м³</span></p>
-                            </div>
-                        </div>
-                        <table class="noborder item-info-cost">
-                            <tbody>
-                            <tr>
-                                <td><span class="bold">7800</span> руб./м³</td>
-                                <td>X</td>
-                                <td>
-                                    <input type="number" min="1" name="item-info-num"
-                                           onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
-                                           value="1" class="calc-num" title="">м³ = <span
-                                            class="bold calc-sum">7800</span> руб.
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        {% include "../_partials/blocks/button.thml.twig" with {
-                        'button_id': 'want-to-order4',
-                        'button_class': 'order-btn pattern pp',
-                        'form_id': '50934',
-                        'form_title': 'Форма заказа',
-                        'button_text': 'Заказать',
-                        }
-                        %}
-                    </div>
-                </div>
+                {% endfor %}
             </div>
             <div class="box">
-                <div class="catalog-item">
-                    <div class="bit calc-bit">
-                        <div class="clr">
-                            <a href="img/content/brus/4/1.jpg" rel="images26" class="fancybox zoom" title="Брус 3">
-                                <img src="img/content/brus/4/1.jpg" alt="Брус 3" title="Брус 3">
-                            </a>
-                            <a href="img/content/brus/4/2.jpg" rel="images26" class="fancybox d-n" title="Брус 3">
-                                <img src="img/content/brus/4/2.jpg" alt="brus-1" title="Брус 3">
-                            </a>
-                            <a href="img/content/brus/4/3.jpg" rel="images26" class="fancybox d-n" title="Брус 3">
-                                <img src="img/content/brus/4/3.jpg" alt="brus-2" title="Брус 3">
-                            </a>
-                            <a href="img/content/brus/4/4.jpg" rel="images26" class="fancybox d-n" title="Брус 3">
-                                <img src="img/content/brus/4/4.jpg" alt="brus-2" title="Брус 3">
-                            </a>
-                            <a href="img/content/brus/4/5.jpg" rel="images26" class="fancybox d-n" title="Брус 3">
-                                <img src="img/content/brus/4/5.jpg" alt="brus-2" title="Брус 3">
-                            </a>
-                            <a href="img/content/brus/4/6.jpg" rel="images26" class="fancybox d-n" title="Брус 3">
-                                <img src="img/content/brus/4/6.jpg" alt="brus-2" title="Брус 3">
-                            </a>
-                            <div class="item-info-block">
-                                <div class="item-plan"><img src="img/content/schemas/cxema_3.jpg" alt=""></div>
-                                <a href="#" class="fs20 em14">Брус 3</a>
-                                <p class="mt15"><span class="bold">150 x 200 x 6000 мм</span><span>ширина x высота x длина</span><span
-                                            class="brown-light mt10">Количество: <span
-                                                class="bold">5,55</span> шт./м³</span></p>
-                            </div>
-                        </div>
-                        <table class="noborder item-info-cost">
-                            <tbody>
-                            <tr>
-                                <td><span class="bold">7800</span> руб./м³</td>
-                                <td>X</td>
-                                <td>
-                                    <input type="number" min="1" name="item-info-num"
-                                           onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
-                                           value="1" class="calc-num" title="">м³ = <span
-                                            class="bold calc-sum">7800</span> руб.
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        {% include "../_partials/blocks/button.thml.twig" with {
-                        'button_id': 'want-to-order5',
-                        'button_class': 'order-btn pattern pp',
-                        'form_id': '50934',
-                        'form_title': 'Форма заказа',
-                        'button_text': 'Заказать',
-                        }
-                        %}
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <div class="bit calc-bit">
-                        <div class="clr">
-                            <a href="img/content/brus/5/1.jpg" rel="images26" class="fancybox zoom" title="Брус 4">
-                                <img src="img/content/brus/5/1.jpg" alt="Брус 4" title="Брус 4">
-                            </a>
-                            <a href="img/content/brus/5/2.jpg" rel="images26" class="fancybox d-n" title="Брус 4">
-                                <img src="img/content/brus/5/2.jpg" alt="brus-1" title="Брус 4">
-                            </a>
-                            <a href="img/content/brus/5/3.jpg" rel="images26" class="fancybox d-n" title="Брус 4">
-                                <img src="img/content/brus/5/3.jpg" alt="brus-2" title="Брус 4">
-                            </a>
-                            <a href="img/content/brus/5/4.jpg" rel="images26" class="fancybox d-n" title="Брус 4">
-                                <img src="img/content/brus/5/4.jpg" alt="brus-2" title="Брус 4">
-                            </a>
-                            <a href="img/content/brus/5/5.jpg" rel="images26" class="fancybox d-n" title="Брус 4">
-                                <img src="img/content/brus/5/5.jpg" alt="brus-2" title="Брус 4">
-                            </a>
-                            <a href="img/content/brus/5/6.jpg" rel="images26" class="fancybox d-n" title="Брус 4">
-                                <img src="img/content/brus/5/6.jpg" alt="brus-2" title="Брус 4">
-                            </a>
-                            <div class="item-info-block">
-                                <div class="item-plan"><img src="img/content/schemas/cxema_4.jpg" alt="">
+                {% for item in catalog.brus | slice(4,4) %}
+                    <div class="catalog-item">
+                        <div class="bit calc-bit">
+                            <div class="clr">
+                                <a href="{{ item.img_folder }}/1.jpg" rel="images26" class="fancybox zoom"
+                                   title="{{ item.title }}">
+                                    <img src="{{ item.img_folder }}/1.jpg" alt="{{ item.img_alt }}"
+                                         title="{{ item.title }}">
+                                </a>
+                                {% for i in 2..6 %}
+                                    <a href="{{ item.img_folder }}/{{ i }}.jpg" rel="images26" class="fancybox d-n"
+                                       title="{{ item.title }}">
+                                        <img src="{{ item.img_folder }}/{{ i }}.jpg" alt="brus-{{ iten.id }}"
+                                             title="{{ item.title }}">
+                                    </a>
+                                {% endfor %}
+                                <div class="item-info-block">
+                                    <div class="item-plan"><img src="{{ item.schema_img }}" alt=""></div>
+                                    <a href="#" class="fs20 em14">{{ item.name }}</a>
+                                    <p class="mt15">
+                                        <span class="bold">{{ item.dimensions }}</span>
+                                        <span>ширина x высота x длина</span>
+                                        <span class="brown-light mt10">Количество: <span class="bold">{{ item.amount }}</span> шт./м³</span>
+                                    </p>
                                 </div>
-                                <a href="#" class="fs20 em14">Брус 4</a>
-                                <p class="mt15"><span class="bold">100 x 200 x 6000 мм</span><span>ширина x высота x длина</span><span
-                                            class="brown-light mt10">Количество: <span
-                                                class="bold">8,33</span> шт./м³</span></p>
                             </div>
+                            <table class="noborder item-info-cost">
+                                <tbody>
+                                <tr>
+                                    <td><span class="bold">{{ item.price }}</span> руб./м³</td>
+                                    <td>X</td>
+                                    <td>
+                                        <input type="number" min="1" name="item-info-num"
+                                               onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+                                               value="1" class="calc-num" title="">м³ = <span
+                                                class="bold calc-sum">{{ item.price }}</span> руб.
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            {% include "../_partials/blocks/button.thml.twig" with {
+                            'button_id': 'want-to-order1',
+                            'button_class': 'order-btn pattern pp',
+                            'form_id': '50934',
+                            'form_title': 'Форма заказа',
+                            'button_text': 'Заказать',
+                            }
+                            %}
                         </div>
-                        <table class="noborder item-info-cost">
-                            <tbody>
-                            <tr>
-                                <td><span class="bold">7800</span> руб./м³</td>
-                                <td>X</td>
-                                <td>
-                                    <input type="number" min="1" name="item-info-num"
-                                           onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
-                                           value="1" class="calc-num" title="">м³ = <span
-                                            class="bold calc-sum">7800</span> руб.
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        {% include "../_partials/blocks/button.thml.twig" with {
-                        'button_id': 'want-to-order6',
-                        'button_class': 'order-btn pattern pp',
-                        'form_id': '50934',
-                        'form_title': 'Форма заказа',
-                        'button_text': 'Заказать',
-                        }
-                        %}
                     </div>
-                </div>
-                <div class="catalog-item">
-                    <div class="bit calc-bit">
-                        <div class="clr">
-                            <a href="img/content/brus/6/1.jpg" rel="images26" class="fancybox zoom" title="Брус 5">
-                                <img src="img/content/brus/6/1.jpg" alt="Брус 5" title="Брус 5">
-                            </a>
-                            <a href="img/content/brus/6/2.jpg" rel="images26" class="fancybox d-n" title="Брус 5">
-                                <img src="img/content/brus/6/2.jpg" alt="brus-1" title="Брус 5">
-                            </a>
-                            <a href="img/content/brus/6/3.jpg" rel="images26" class="fancybox d-n" title="Брус 5">
-                                <img src="img/content/brus/6/3.jpg" alt="brus-2" title="Брус 5">
-                            </a>
-                            <a href="img/content/brus/6/4.jpg" rel="images26" class="fancybox d-n" title="Брус 5">
-                                <img src="img/content/brus/6/4.jpg" alt="brus-2" title="Брус 5">
-                            </a>
-                            <a href="img/content/brus/6/5.jpg" rel="images26" class="fancybox d-n" title="Брус 5">
-                                <img src="img/content/brus/6/5.jpg" alt="brus-2" title="Брус 5">
-                            </a>
-                            <a href="img/content/brus/6/6.jpg" rel="images26" class="fancybox d-n" title="Брус 5">
-                                <img src="img/content/brus/6/6.jpg" alt="brus-2" title="Брус 5">
-                            </a>
-                            <div class="item-info-block">
-                                <div class="item-plan"><img src="img/content/schemas/cxema_4.jpg" alt=""></div>
-                                <a href="#" class="fs20 em14">Брус 5</a>
-                                <p class="mt15"><span class="bold">200 x 150 x 6000 мм</span><span>ширина x высота x длина</span><span
-                                            class="brown-light mt10">Количество: <span
-                                                class="bold">5,55</span> шт./м³</span></p>
-                            </div>
-                        </div>
-                        <table class="noborder item-info-cost">
-                            <tbody>
-                            <tr>
-                                <td><span class="bold">7800</span> руб./м³</td>
-                                <td>X</td>
-                                <td>
-                                    <input type="number" min="1" name="item-info-num"
-                                           onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
-                                           value="1" class="calc-num" title="">м³ = <span
-                                            class="bold calc-sum">7800</span> руб.
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        {% include "../_partials/blocks/button.thml.twig" with {
-                        'button_id': 'want-to-order7',
-                        'button_class': 'order-btn pattern pp',
-                        'form_id': '50934',
-                        'form_title': 'Форма заказа',
-                        'button_text': 'Заказать',
-                        }
-                        %}
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <div class="bit calc-bit">
-                        <div class="clr">
-                            <a href="img/content/brus/7/1.jpg" rel="images26" class="fancybox zoom" title="Брус 6">
-                                <img src="img/content/brus/7/1.jpg" alt="Брус 6" title="Брус 6">
-                            </a>
-                            <a href="img/content/brus/7/2.jpg" rel="images26" class="fancybox d-n" title="Брус 6">
-                                <img src="img/content/brus/7/2.jpg" alt="brus-1" title="Брус 6">
-                            </a>
-                            <a href="img/content/brus/7/3.jpg" rel="images26" class="fancybox d-n" title="Брус 6">
-                                <img src="img/content/brus/7/3.jpg" alt="brus-2" title="Брус 6">
-                            </a>
-                            <a href="img/content/brus/7/4.jpg" rel="images26" class="fancybox d-n" title="Брус 6">
-                                <img src="img/content/brus/7/4.jpg" alt="brus-2" title="Брус 6">
-                            </a>
-                            <a href="img/content/brus/7/5.jpg" rel="images26" class="fancybox d-n" title="Брус 6">
-                                <img src="img/content/brus/7/5.jpg" alt="brus-2" title="Брус 6">
-                            </a>
-                            <a href="img/content/brus/7/6.jpg" rel="images26" class="fancybox d-n" title="Брус 6">
-                                <img src="img/content/brus/7/6.jpg" alt="brus-2" title="Брус 6">
-                            </a>
-                            <div class="item-info-block">
-                                <div class="item-plan"><img src="img/content/schemas/cxema_4_semi.jpg" alt=""></div>
-                                <a href="#" class="fs20 em14">Брус 6</a>
-                                <p class="mt15"><span class="bold">200 x 200 x 6000 мм</span><span>ширина x высота x длина</span><span
-                                            class="brown-light mt10">Количество: <span
-                                                class="bold">4,17</span> шт./м³</span></p>
-                            </div>
-                        </div>
-                        <table class="noborder item-info-cost">
-                            <tbody>
-                            <tr>
-                                <td><span class="bold">7800</span> руб./м³</td>
-                                <td>X</td>
-                                <td>
-                                    <input type="number" min="1" name="item-info-num"
-                                           onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
-                                           value="1" class="calc-num" title="">м³ = <span
-                                            class="bold calc-sum">7800</span> руб.
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        {% include "../_partials/blocks/button.thml.twig" with {
-                        'button_id': 'want-to-order8',
-                        'button_class': 'order-btn pattern pp',
-                        'form_id': '50934',
-                        'form_title': 'Форма заказа',
-                        'button_text': 'Заказать',
-                        }
-                        %}
-                    </div>
-                </div>
+                {% endfor %}
+
             </div>
         </div>
     </div>
