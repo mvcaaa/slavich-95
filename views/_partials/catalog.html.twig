@@ -1,9 +1,11 @@
+
 <section class="catalog-box">
     <div class="fluid-container">
         <h2>Каталог профилированного бруса для дома, бани, беседки и т.д.</h2>
         <div class="catalog">
+            {% for z in 0..1 %}
             <div class="box">
-                {% for item in catalog.brus | slice(0,4) %}
+                {% for item in catalog.brus | slice(z*4,4) %}
                     <div class="catalog-item">
                         <div class="bit calc-bit">
                             <div class="clr">
@@ -55,60 +57,7 @@
                     </div>
                 {% endfor %}
             </div>
-            <div class="box">
-                {% for item in catalog.brus | slice(4,4) %}
-                    <div class="catalog-item">
-                        <div class="bit calc-bit">
-                            <div class="clr">
-                                <a href="{{ item.img_folder }}/1.jpg" rel="images26" class="fancybox zoom"
-                                   title="{{ item.title }}">
-                                    <img src="{{ item.img_folder }}/1.jpg" alt="{{ item.img_alt }}"
-                                         title="{{ item.title }}">
-                                </a>
-                                {% for i in 2..6 %}
-                                    <a href="{{ item.img_folder }}/{{ i }}.jpg" rel="images26" class="fancybox d-n"
-                                       title="{{ item.title }}">
-                                        <img src="{{ item.img_folder }}/{{ i }}.jpg" alt="brus-{{ iten.id }}"
-                                             title="{{ item.title }}">
-                                    </a>
-                                {% endfor %}
-                                <div class="item-info-block">
-                                    <div class="item-plan"><img src="{{ item.schema_img }}" alt=""></div>
-                                    <a href="#" class="fs20 em14">{{ item.name }}</a>
-                                    <p class="mt15">
-                                        <span class="bold">{{ item.dimensions }}</span>
-                                        <span>ширина x высота x длина</span>
-                                        <span class="brown-light mt10">Количество: <span class="bold">{{ item.amount }}</span> шт./м³</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <table class="noborder item-info-cost">
-                                <tbody>
-                                <tr>
-                                    <td><span class="bold">{{ item.price }}</span> руб./м³</td>
-                                    <td>X</td>
-                                    <td>
-                                        <input type="number" min="1" name="item-info-num"
-                                               onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
-                                               value="1" class="calc-num" title="">м³ = <span
-                                                class="bold calc-sum">{{ item.price }}</span> руб.
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            {% include "../_partials/blocks/button.thml.twig" with {
-                            'button_id': 'want-to-order1',
-                            'button_class': 'order-btn pattern pp',
-                            'form_id': '50934',
-                            'form_title': 'Форма заказа',
-                            'button_text': 'Заказать',
-                            }
-                            %}
-                        </div>
-                    </div>
-                {% endfor %}
-
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
