@@ -55,7 +55,7 @@
     .item p,
     .item p a,
     .delivery-item{
-        font-size: 16px;
+        font-size: .9vw;
     }
     .logo{
         padding-left: 0;
@@ -114,9 +114,6 @@
     }
     .menu li{
         padding: 0 5px;
-    }
-    .menu li a{
-        font-size: 14px;
     }
     .contact,
     .logo a{
