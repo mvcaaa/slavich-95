@@ -70,11 +70,10 @@
 {% block top %}
     {% set navigation_bar = [
     ['index', 'Профилированный брус'],
-    ['construction', 'Строительство'], 
-    ['lumber', 'Пиломатериалы'], 
-    ['delivery', 'Доставка'], 
-    ['payment', 'Оплата'], 
-    ['djut', 'Утеплитель'] ] %}
+    ['dom_brus', 'Дома из профилированного бруса '],
+    ['dom_brevno', 'Дома из бревна ручной рубки'],
+    ['dom_karkas', 'Каркасные дома'],
+    ] %}
     
     {% set active_page = active_page|default('index') %}
 
@@ -128,8 +127,6 @@
                                 <a {% if item[0] == active_page %} class="active"{% endif %} href="{{ item[0] }}.html">{{ item[1] }}</a>
                             </li>
                         {% endfor %}
-                        <li><a href="#">Информация</a></li>
-                        <li><a href="#">Медиа</a></li>
                     </ul>
                 </div>
             </nav>

@@ -25,7 +25,6 @@ var makeRelativeLink = function (val) {
 var expressPort = 3000;
 
 module.exports = function (grunt) {
-
   grunt.initConfig({
     express: {
       server: {
@@ -142,6 +141,19 @@ module.exports = function (grunt) {
         dest: 'slavich95.ru/docs',
         exclusions: ['build/html/vendor']
       }
+    },
+    watch: {
+        files: [
+            '**/*.twig',
+            '**/*.html',
+            '**/*.css',
+            '!_*/*.twig',
+            '!_*/**/*.twig',
+            '!_*/*.php',
+            '!**/_*.twig',
+            '!build/**/*'
+        ],
+        tasks: ['clean:build', 'twigRenderer:build', 'copy:build']
     }
   });
 
@@ -153,7 +165,9 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-browser-sync');
   // grunt.loadNpmTasks('grunt-ftp-deploy');
   grunt.loadNpmTasks('grunt-ftpush');
-  
+  grunt.loadNpmTasks('grunt-contrib-watch');
+    
+
   grunt.registerTask('server', ['express:server', 'browserSync', 'express-keepalive']);
   grunt.registerTask('build', ['clean:build', 'twigRenderer:build', 'copy:build']);
   grunt.registerTask('deploy', ['build', 'ftpush']);
