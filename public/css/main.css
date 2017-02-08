@@ -62,7 +62,7 @@ header .row{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: auto;
     width: 75%;
     margin: auto;
 }
@@ -103,11 +103,31 @@ header ul{
     font-weight: bold;
     color: #000;
 }
-.call-back ul li:last-of-type{
+.call-back ul li {
     font-size: 10px;
     font-weight: normal;
     color: #323232;
 }
+.instagram ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
+.instagram a {
+    font-size: 20px;
+    font-weight: normal;
+    color: #000;
+    margin: 0 5px;
+}
+.instagram a:hover {
+    color: #000;
+}
+.instagram li {
+    vertical-align: middle;
+    display: inline-block;
+}
+
 .call-back-btn{
     width: 165px;
     height: 32px;
@@ -1032,4 +1052,26 @@ footer .row{
 }
 .content {
     margin: 0 0 25px 0;
+}
+
+/* Instagram styles */
+.ig-b- {
+    display: inline-block;
+}
+
+.ig-b- img {
+    visibility: hidden;
+}
+
+.ig-b-32 {
+    width: 50px;
+    height: 50px;
+    background: url(../img/instagram_color.png) no-repeat 0 0;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .ig-b-32 {
+        background-image: url(../img/instagram_color.png);
+        background-size: 60px 178px;
+    }
 }
