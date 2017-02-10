@@ -1,0 +1,42 @@
+<section class="catalog-box">
+    <div class="fluid-container">
+        <h2>Наши работы</h2>
+        <div class="catalog dom_brus">
+            {% for z in 0..1 %}
+            <div class="box">
+                {% for item in catalog.dom_brevno | slice(z*4,4) %}
+                    <div class="catalog-item">
+                        <div class="bit calc-bit">
+                            <div class="clr">
+                                <a href="img/content/dom_brevno/{{  item.id }}/1.jpg" rel="images26" class="fancybox zoom"
+                                   title="{{ item.title }}">
+                                    <img src="img/content/dom_brevno/{{  item.id }}/p.jpg" alt="{{ item.img_alt }}"
+                                         title="{{ item.title }}">
+                                </a>
+                                {% if item.num_photos > 1 %}
+                                    {% for i in 2 .. item.num_photos %}
+                                    <a href="img/content/dom_brevno/{{  item.id }}/{{ i }}.jpg" rel="images26" class="fancybox d-n"
+                                       title="{{ item.title }}">
+                                        <img src="img/content/dom_brevno/{{  item.id }}/{{ i }}.jpg" alt="brus-{{ iten.id }}"
+                                             title="{{ item.title }}">
+                                    </a>
+                                    {% endfor %}
+                                {% endif %}
+                                <div class="item-info-block">
+                                    <a href="#" class="fs20 em14">{{ item.name }}</a>
+                                    <p class="mt15">
+                                        {#<span class="bold">{{ item.descr }}</span>#}
+                                        <span class="brown-light mt10">{{ item.descr2 }}</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

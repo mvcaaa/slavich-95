@@ -2,16 +2,48 @@
 {% set active_page = "dom_brevno" %}
 
 {% block content %}
+    <section class="picture brevno">
+        <div class="fluid-container">
+            <div class="row">
+                <div class="col s12 m10 offset-m1 l7 offset-l3 no-padding">
+                    <h2> <span>Строительство домов из <br>бревна ручной рубки <br><br>Без посредников!</span></h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include "../_partials/catalog_dom_brevno.html.twig" %}
     <section class="construction">
         <br>
         <div class="fluid-container">
             <div class="content">
-                <h1>Информация добавляется</h1>
+                <div class="row">
+                    <div class="thumbnail">
+                        <img class="img-responsive pull-left" src="img/dmitriy_brevo.jpg" width="200px" alt="..."
+                             style="margin-right: 15px;">
+                        <p><b>Селезнёв Дмитрий Сергеевич</b> – наш ведущий специалист по строительству бревенчатых домов.
+                            Вы можете позвонить Дмитрию по любому вопросу, связанному со
+                            строительством вашего дома по телефону <a href="tel:+79210222202">+79210222202</a></p>
+                        <p>Он лично рассмотрит ваш проект или
+                            эскиз и сделает подробную смету по материалам и работам. <span style="color: #eb2813">Быстро и бесплатно!!!</span>
+                            Для этого
+                            используйте форму предварительного расчета ниже. Для более точного расчета
+                            дополнительно требуется указать сечение бревна для наружных и внутренних стен, высоту
+                            пол-потолок поэтажно, кровельный материал для крыши (в прикрепленном файле).</p>
+                    </div>
+                </div>
+                {% include "../_partials/calculation_form.html.twig" %}
+                <h1>Оплата</h1>
+                <p>
+                    Оплата производится в три этапа:
+                </p>
+                <ul>
+                    <li>50% - при подписании договора</li>
+                    <li>25% - при отгрузке готового сруба с нашей стройплощадки</li>
+                    <li>25% - после подписания акта приема-передачи</li>
+                </ul>
             </div>
         </div>
     </section>
-    {% include "../_partials/vantage.html.twig" %}
-    {% include "../_partials/feedback.html.twig" %}
     {% include "../_partials/faq.html.twig" %}
 {% endblock %}
 

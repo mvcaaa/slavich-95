@@ -232,6 +232,14 @@ nav{
 .mobile-menu li a:hover{
     color: #fff;
 }
+.brus {
+    min-height: 500px !important;
+    background: url("../img/bg_dom_brus.jpg") no-repeat center !important;
+}
+.brevno {
+    min-height: 500px !important;
+    background: url("../img/bg_dom_brevno.jpg") no-repeat center !important;
+}
 .picture{
     max-height: 380px;
     background: url("../img/bg.jpg") no-repeat center;
@@ -394,6 +402,16 @@ input[type="text"], input[type="number"], input[type="password"], select, textar
     border: none;
     float: left;
 }
+.dom_brus .bit .zoom {
+    width: 200px;
+    height: 200px;
+
+}
+.dom_brus .bit .zoom img {
+    width: 200px !important;
+    height: 200px !important;
+}
+
 .catalog .bit .zoom img {
     width: 120px;
     height: 120px;
@@ -403,6 +421,13 @@ input[type="text"], input[type="number"], input[type="password"], select, textar
     float: left;
     margin-left: 10px;
     width: 264px;
+}
+.dom_brus .bit .item-info-block {
+    /*width: 20% !important;*/
+    width: 240px;
+}
+.dom_brus .catalog_item {
+    width: 25% !important;
 }
 .catalog .bit .item-info-block .item-plan {
     float: left;
@@ -462,6 +487,10 @@ input[type="text"], input[type="number"], input[type="password"], select, textar
     height: 30px;
     transition: all 0.15s ease-out;
     z-index: 2;
+}
+.dom_brus .zoom:before {
+    top: 68% !important;
+    left: 55% !important;
 }
 .zoom:hover:after, .zoom:hover:before {
     opacity: 1;
