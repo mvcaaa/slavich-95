@@ -55,7 +55,7 @@
     .item p,
     .item p a,
     .delivery-item{
-        font-size: .9vw;
+        font-size: 1.3vw;
     }
     .logo{
         padding-left: 0;
@@ -358,6 +358,13 @@
     .vantage-item h3{
         font-size: 13px;
     }
+    .menu li a,
+    .item p,
+    .item p a,
+    .delivery-item{
+        font-size: 1.8vw;
+    }
+
 
 }
 
@@ -463,7 +470,15 @@
         margin-left: 125px;
         width: 70%;
     }
-
+    .menu li a,
+    .item p,
+    .item p a,
+    .delivery-item{
+        font-size: 4vw;
+    }
+    .instagram {
+        display: none;
+    }
 
 }
 
@@ -474,7 +489,15 @@
     .item p a{
         font-size: 10px;
     }
-
+    .menu li a,
+    .item p,
+    .item p a,
+    .delivery-item{
+        font-size: 4vw;
+    }
+    .instagram {
+        display: none;
+    }
 }
 
 

@@ -172,6 +172,7 @@ nav{
     border: none;
     padding: 0;
     background: url("../img/menu-btn.png") no-repeat center transparent;
+    color: white;
 }
 .active-menu-btn{
     background: url("../img/close-btn.png") no-repeat center transparent;
@@ -188,7 +189,7 @@ nav{
 .menu li a{
     position: relative;
     display: block;
-    font-size: .9vw;
+    /*font-size: .9vw;*/
     color: #fff;
 }
 .menu li a.active:after,
@@ -223,7 +224,7 @@ nav{
     line-height: 25px;
 }
 .mobile-menu li a{
-    color: #000;
+    color: white;
 }
 .mobile-menu li a.active:after,
 .mobile-menu li a:hover:after{
@@ -1077,7 +1078,7 @@ footer .row{
 .content p, ul{
     font-size: 18pt;
     padding: 0 0 8px 0;
-    text-indent: 25px;
+    /*text-indent: 25px;*/
 }
 .content {
     margin: 0 0 25px 0;
@@ -1101,6 +1102,6 @@ footer .row{
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     .ig-b-32 {
         background-image: url(../img/instagram_color.png);
-        background-size: 60px 178px;
+        /*background-size: 60px 178px;*/
     }
 }
