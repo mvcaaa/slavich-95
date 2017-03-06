@@ -49,7 +49,7 @@ if (isset($_FILES['uploaded_file']) &&
         echo 'Mailer Error: '.$mail->ErrorInfo;
     }
     else {
-        header('Location: http://'. $_SERVER['HTTP_HOST'].'/'.$_POST['redirect_page']);
+        header('Location: '. $_SERVER['HTTP_REFERER'].'?status=ok');
         die;
     }
 }
