@@ -1099,9 +1099,10 @@ footer .row{
     background: url(../img/instagram_color.png) no-repeat 0 0;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-    .ig-b-32 {
-        background-image: url(../img/instagram_color.png);
-        /*background-size: 60px 178px;*/
-    }
+.pilomat ul, .pilomat li {
+    list-style-type: disc;
+}
+
+.pilomat li  {
+    margin-left: 50px;
 }
