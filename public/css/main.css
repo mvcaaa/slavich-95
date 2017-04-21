@@ -241,6 +241,10 @@ nav{
     min-height: 500px !important;
     background: url("../img/bg_dom_brevno.jpg") no-repeat center !important;
 }
+.karkas {
+    min-height: 500px !important;
+    background: url("../img/bg_dom_karkas.jpg") no-repeat center !important;
+}
 .picture{
     max-height: 380px;
     background: url("../img/bg.jpg") no-repeat center;
@@ -258,6 +262,10 @@ nav{
 }
 .picture h2 span{
     color: #b3e836;
+}
+
+.karkas h2 span {
+    color: greenyellow;
 }
 
 .catalog-box{

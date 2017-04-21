@@ -5,7 +5,7 @@ var compress = require('compression');
 var data = require('./data.json');
 
 
-twig.cache(true);
+twig.cache(false);
 
 var app = express();
 
@@ -26,7 +26,12 @@ var getViewByPath = function (path) {
         p.pop()
     }
 
-    return capitalize(p[0]) + '/' + (p[1] ? p[1] + '.html.twig' : 'index.html.twig');
+    if (p[0] != 'index')
+    {
+        p[0] = p[0].slice(0, -5);
+    }
+
+    return p[0] + '/' + (p[1] ? p[1] + '.html.twig' : 'index.html.twig');
 };
 
 var capitalize = function (str) {

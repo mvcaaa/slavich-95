@@ -37,7 +37,7 @@ module.exports = function (grunt) {
     browserSync: {
       dev: {
         bsFiles: {
-          src: ['public/**/*', 'views/**/*']
+          src: ['public/**/*', 'views/**/*', 'data.json']
         },
         options: {
           proxy: 'localhost:' + expressPort

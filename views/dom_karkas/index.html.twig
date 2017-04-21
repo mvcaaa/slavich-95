@@ -2,15 +2,35 @@
 {% set active_page = "dom_karkas" %}
 
 {% block content %}
+    <section class="picture karkas">
+        <div class="fluid-container">
+            <div class="row">
+                <div class="col s12 m10 offset-m1 l7 offset-l3 no-padding">
+                    <h2><span>Строительство <br>каркасных домов <br><br>Без посредников!</span></h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include "../_partials/catalog_dom_karkas.html.twig" %}
+
     <section class="construction">
         <br>
         <div class="fluid-container">
             <div class="content">
-                <h1>Информация добавляется</h1>
+                <div class="row">
+                    <div class="thumbnail">
+                        <img class="img-responsive pull-left" src="img/alex_karkas.jpg" width="200px" alt="..."
+                             style="margin-right: 15px;">
+                        <p><b>Васильев Александр Васильевич</b> – наш специалист по строительству каркасных домов.
+                            Звоните Александру по вопросам, связанным со
+                            строительством вашего дома по телефону <a href="tel:+79818227897">+79818227897</a></p>
+                            <p>Так же, вы можете воспользоваться формой заявки на предварительый расчет ниже.</p>
+                            <p>Он лично рассмотрит ваш проект</p>
+                    </div>
+                </div>
+                {% include "../_partials/calculation_form.html.twig" %}
             </div>
         </div>
-    </section>
-    {% include "../_partials/vantage.html.twig" %}
-    {% include "../_partials/feedback.html.twig" %}
+    </section>   
     {% include "../_partials/faq.html.twig" %}
 {% endblock %}
