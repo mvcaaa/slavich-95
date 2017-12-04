@@ -3,3 +3,7 @@ build
 .ftppass
 .grunt
 php/vendor
+.idea/
+npm-debug.log
+package-lock.json
+php/composer.lock
