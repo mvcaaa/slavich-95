@@ -16,7 +16,7 @@
         "schema_img": "img/content/schemas/shemas-1.png",
         "dimensions": "100 x 150 x 6000",
         "amount": "11,11",
-        "price": "8200"
+        "price": "8500"
       },
       {
         "id": 2,
@@ -26,7 +26,7 @@
         "schema_img": "img/content/schemas/shemas-1.png",
         "dimensions": "100 x 150 x 6000",
         "amount": "11,11",
-        "price": "8200"
+        "price": "8500"
       },
       {
         "id": 3,
@@ -36,7 +36,7 @@
         "schema_img": "img/content/schemas/cxema_2.jpg",
         "dimensions": "150 x 150 x 6000",
         "amount": "7,4",
-        "price": "8200"
+        "price": "8500"
       },
       {
         "id": 4,
@@ -46,7 +46,7 @@
         "schema_img": "img/content/schemas/cxema_2_semi.jpg",
         "dimensions": "150 x 150 x 6000",
         "amount": "7,4",
-        "price": "8200"
+        "price": "8500"
       },
       {
         "id": 5,
@@ -56,7 +56,7 @@
         "schema_img": "img/content/schemas/cxema_3.jpg",
         "dimensions": "150 x 200 x 6000",
         "amount": "5,55",
-        "price": "8200"
+        "price": "8500"
       },
       {
         "id": 6,
@@ -66,7 +66,7 @@
         "schema_img": "img/content/schemas/cxema_4.jpg",
         "dimensions": "100 x 200 x 6000",
         "amount": "8,33",
-        "price": "8200"
+        "price": "8500"
       },
       {
         "id": 7,
@@ -76,7 +76,7 @@
         "schema_img": "img/content/schemas/cxema_4.jpg",
         "dimensions": "200 x 150 x 6000",
         "amount": "5,55",
-        "price": "8200"
+        "price": "8500"
       },
       {
         "id": 8,
@@ -86,7 +86,7 @@
         "schema_img": "img/content/schemas/cxema_4_semi.jpg",
         "dimensions": "200 x 200 x 6000",
         "amount": "4,17",
-        "price": "8200"
+        "price": "8500"
       }
     ],
     "dom_brus": [
