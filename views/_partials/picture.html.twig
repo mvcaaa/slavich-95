@@ -3,8 +3,26 @@
         <div class="row">
             <div class="col s12 m10 offset-m1 l7 offset-l3 no-padding">
                 <h2>Профилированный брус
-                    <br><span style="color: #FFD700">камерной сушки</span> <span>от 11000 руб/м³</span>
-                    <br>естественной влажности <span>от 8200 руб/м³</span>
+                    <br><span style="color: #FFD700">камерной сушки</span>
+                    {% include "../_partials/blocks/ahref.html.twig" with {
+                    'button_id': 'call-back-btn1',
+                    'button_class': 'call-back-btn',
+                    'form_id': '50934',
+                    'form_title': 'Свяжитесь с нами',
+                    'href_text': 'от 10800 ₽/м³',
+                    'price': '10800'
+                    }
+                    %}
+                    <br>естественной влажности 
+                    {% include "../_partials/blocks/ahref.html.twig" with {
+                    'button_id': 'call-back-btn1',
+                    'button_class': 'call-back-btn',
+                    'form_id': '50934',
+                    'form_title': 'Свяжитесь с нами',
+                    'href_text': 'от 9500 ₽/м³',
+                    'price': '9500'
+                    }
+                    %}
                     <br>Без предоплаты!
                 </h2>
             </div>

@@ -71,8 +71,6 @@
     {% set navigation_bar = [
     ['index', 'Профилированный брус'],
     ['dom_brus', 'Дома из профилированного бруса '],
-    ['dom_brevno', 'Дома из бревна ручной рубки'],
-    ['dom_karkas', 'Каркасные дома'],
     ] %}
 
     {% set active_page = active_page|default('index') %}
@@ -87,13 +85,6 @@
                         </div>
                         <ul class="call-back">
                             <li>
-                                <ul>
-                                    <li>8 (800) 555-12-88</li>
-                                    <li>Звоните нам с 8:00 до 21:00</li>
-                                    <li>Без обеда и выходных !</li>
-                                </ul>
-                            </li>
-                            <li>
                                 {% include "../_partials/blocks/button.thml.twig" with {
                                 'button_id': 'call-back-btn1',
                                 'button_class': 'call-back-btn',
@@ -104,13 +95,6 @@
                                 %}
                             </li>
                         </ul>
-                        <!-- <ul class="instagram">
-                            <li>
-                                <a href="https://www.instagram.com/pavlov.iport/" class="ig-b- ig-b-32"><img src="//badges.instagram.com/static/images/ig-badge-32.png" alt="Instagram" /></a>
-                            </li><li>
-                                <a href="https://www.instagram.com/explore/tags/славич_строит_дом/">#славич_строит_дом</a>
-                            </li>
-                        </ul> -->
                         <ul class="contact">
                             <li><a href="#">slavich-95@mail.ru</a></li>
                             <li>+7 (911) 101-55-35</li>

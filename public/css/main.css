@@ -1114,3 +1114,12 @@ footer .row{
 .pilomat li  {
     margin-left: 50px;
 }
+
+
+.picture a, link:active, link:hover, a:active, a:hover, a:focus {
+    color: #b3e836;
+}
+
+.pilomat a, link:active, link:hover, a:active, a:hover, a:focus {
+    color: #eb2813;
+}

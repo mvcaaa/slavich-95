@@ -1,0 +1,30 @@
+{
+    "name": "Node",
+    "dockerFile": "Dockerfile",
+
+    // Comment out the next line to run as root instead. Linux users, update
+    // Dockerfile with your user's UID/GID if not 1000.
+    "runArgs": ["-u", "node"],
+
+    // Use 'settings' to set *default* container specific settings.json values on container create. 
+    // You can edit these settings after create using File > Preferences > Settings > Remote.
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": true
+    },
+
+    // Uncomment the next line if you want to publish any ports.
+    "appPort": ["3000", "3001", "3002"],
+
+    // Uncomment the next line to run commands after the container is created.
+    "postCreateCommand": "npm install",
+
+    "extensions": [
+        "dbaeumer.vscode-eslint"
+    ],
+
+    "workspaceMount": "src=/home/mvc/local-work/slavich-yo,dst=/workspace,type=bind",
+    "workspaceFolder": "/workspace"
+}

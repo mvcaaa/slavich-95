@@ -9,9 +9,9 @@ var makeRelativeLink = function (val) {
     if (url == '/') {
       htmlHref = 'index.html';
     } else if (url.split('.').pop() == 'php') {
-      htmlHref = val; 
+      htmlHref = val;
     } else if (url.split('.').pop() == 'jpg') {
-      htmlHref = val; 
+      htmlHref = val;
     } else {
       htmlHref = url.replace(/^\//, '').replace(/\//ig, '_') + '.html';
     }
@@ -143,17 +143,17 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-        files: [
-            '**/*.twig',
-            '**/*.html',
-            '**/*.css',
-            '!_*/*.twig',
-            '!_*/**/*.twig',
-            '!_*/*.php',
-            '!**/_*.twig',
-            '!build/**/*'
-        ],
-        tasks: ['clean:build', 'twigRenderer:build', 'copy:build']
+      files: [
+        '**/*.twig',
+        '**/*.html',
+        '**/*.css',
+        '!_*/*.twig',
+        '!_*/**/*.twig',
+        '!_*/*.php',
+        '!**/_*.twig',
+        '!build/**/*'
+      ],
+      tasks: ['clean:build', 'twigRenderer:build', 'copy:build']
     }
   });
 
@@ -166,7 +166,7 @@ module.exports = function (grunt) {
   // grunt.loadNpmTasks('grunt-ftp-deploy');
   grunt.loadNpmTasks('grunt-ftpush');
   grunt.loadNpmTasks('grunt-contrib-watch');
-    
+
 
   grunt.registerTask('server', ['express:server', 'browserSync', 'express-keepalive']);
   grunt.registerTask('build', ['clean:build', 'twigRenderer:build', 'copy:build']);
